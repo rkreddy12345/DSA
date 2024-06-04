@@ -10,9 +10,9 @@ public class ArrayProblem1 {
             return 0;
         }
         int count=0;
-
+        boolean isGreaterFound=false;
         for(int i=0; i< arr.length; i++){
-            boolean isGreaterFound=false;
+            isGreaterFound=false;
             for(int j=0; j< arr.length; j++){
                 if(arr[j] > arr[i]){
                     isGreaterFound=true;
