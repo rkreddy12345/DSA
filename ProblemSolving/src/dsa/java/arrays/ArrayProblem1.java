@@ -4,15 +4,18 @@ import java.util.Objects;
 
 public class ArrayProblem1 {
 
-    public static int findCount(int arr[]){
+    //Find the number of elements which has at least 1 element greater than itself.
+
+
+    public static int findCount(int[] arr){
 
         if(Objects.isNull ( arr ) || arr.length==0){
             return 0;
         }
         int count=0;
-
+        boolean isGreaterFound=false;
         for(int i=0; i< arr.length; i++){
-            boolean isGreaterFound=false;
+            isGreaterFound=false;
             for(int j=0; j< arr.length; j++){
                 if(arr[j] > arr[i]){
                     isGreaterFound=true;
@@ -25,7 +28,7 @@ public class ArrayProblem1 {
         return count;   //this is done in O(N^2) i.e N^2 iterations
     }
 
-    public static int findCountInOrderOfN(int arr[]){
+    public static int findCountInOrderOfN(int[] arr){
         if(Objects.isNull ( arr ) || arr.length==0){
             return 0;
         }
@@ -67,7 +70,7 @@ public class ArrayProblem1 {
     }
 
     public static void main ( String[] args ) {
-        int arr[] = {-3,-2,6,8,4,8,5};
+        int[] arr = {-3,-2,6,8,4,8,5};
         //System.out.println (findCount ( arr ));
         System.out.println (findCountInNIterations ( arr ));
     }
